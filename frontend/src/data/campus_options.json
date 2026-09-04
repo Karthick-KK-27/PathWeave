@@ -1,0 +1,116 @@
+{
+  "electives": [
+    {
+      "id": "elec_001",
+      "name": "Embedded Systems Design",
+      "department": "EEE",
+      "skills_covered": ["Embedded C", "Microcontrollers", "RTOS", "Hardware-Software Interfacing"],
+      "effort": "semester-long",
+      "credits": 3
+    },
+    {
+      "id": "elec_002",
+      "name": "Power Electronics",
+      "department": "EEE",
+      "skills_covered": ["Power Converters", "Motor Drives", "Circuit Design"],
+      "effort": "semester-long",
+      "credits": 3
+    },
+    {
+      "id": "elec_003",
+      "name": "Machine Learning",
+      "department": "CSE (open elective)",
+      "skills_covered": ["Python", "Supervised Learning", "Model Evaluation", "PyTorch/TensorFlow basics"],
+      "effort": "semester-long",
+      "credits": 3
+    },
+    {
+      "id": "elec_004",
+      "name": "Control Systems",
+      "department": "EEE",
+      "skills_covered": ["Feedback Systems", "PID Control", "MATLAB/Simulink"],
+      "effort": "semester-long",
+      "credits": 3
+    },
+    {
+      "id": "elec_005",
+      "name": "IoT and Sensor Networks",
+      "department": "EEE",
+      "skills_covered": ["IoT Protocols", "Sensor Integration", "Edge Computing"],
+      "effort": "semester-long",
+      "credits": 3
+    },
+    {
+      "id": "elec_006",
+      "name": "Data Structures and Algorithms (open elective)",
+      "department": "CSE",
+      "skills_covered": ["Algorithms", "Problem Solving", "Coding Interviews"],
+      "effort": "semester-long",
+      "credits": 3
+    }
+  ],
+  "clubs": [
+    {
+      "id": "club_001",
+      "name": "Team Kshatriya (SAE EV Sub-team)",
+      "type": "technical club",
+      "skills_covered": ["BMS Design", "Wiring Harness Fabrication", "Motor Controller Interfacing", "Embedded Systems", "PCB Design", "Team Engineering"],
+      "effort": "ongoing, high commitment",
+      "leverage_note": "Highest-leverage option for any hardware/EV/embedded-systems-adjacent role — real hands-on system-building experience"
+    },
+    {
+      "id": "club_002",
+      "name": "IEEE Student Chapter",
+      "type": "professional chapter",
+      "skills_covered": ["Technical Event Organizing", "Networking", "Paper Writing/Presentation", "Leadership"],
+      "effort": "ongoing, moderate commitment",
+      "leverage_note": "Strong for roles valuing communication and technical leadership alongside core engineering skills"
+    },
+    {
+      "id": "club_003",
+      "name": "Robotics Club",
+      "type": "technical club",
+      "skills_covered": ["Robotics", "Embedded C", "Mechanical Design", "Sensors and Actuators"],
+      "effort": "ongoing, moderate commitment",
+      "leverage_note": "Good complement to control systems coursework"
+    },
+    {
+      "id": "club_004",
+      "name": "Coding Club / SDC-equivalent",
+      "type": "technical club",
+      "skills_covered": ["Software Development", "Web/App Projects", "Git/GitHub Collaboration"],
+      "effort": "ongoing, low-moderate commitment",
+      "leverage_note": "Useful if the target role needs software fundamentals alongside EEE core skills"
+    }
+  ],
+  "project_ideas": [
+    {
+      "id": "proj_001",
+      "title": "Battery State-of-Health Estimator (PRBS-based)",
+      "estimated_time": "2-3 weeks",
+      "skills_covered": ["Signal Processing", "Battery Modeling", "Embedded Systems", "Data Analysis"],
+      "leverage_note": "Directly demonstrates BMS/EV domain depth — strong for automotive/energy roles"
+    },
+    {
+      "id": "proj_002",
+      "title": "Load Forecasting with Graph Transformers",
+      "estimated_time": "3-4 weeks",
+      "skills_covered": ["Machine Learning", "Time Series Forecasting", "Python", "Power Systems Domain Knowledge"],
+      "leverage_note": "Bridges core EEE (power systems) with ML — strong cross-disciplinary signal for AI-adjacent EE roles"
+    },
+    {
+      "id": "proj_003",
+      "title": "OEE Monitoring HMI (Industrial Automation)",
+      "estimated_time": "3-4 weeks",
+      "skills_covered": ["PLC Programming", "HMI Design", "Industrial Protocols", "System Integration"],
+      "leverage_note": "Strong for industrial automation / controls engineering roles"
+    },
+    {
+      "id": "proj_004",
+      "title": "BLE Beacon-based Indoor Positioning System",
+      "estimated_time": "1-2 weeks",
+      "skills_covered": ["Embedded Systems", "Bluetooth Protocols", "Mobile Integration"],
+      "leverage_note": "Fast, high-leverage project — good if you need to close a gap quickly with limited time"
+    }
+  ]
+}

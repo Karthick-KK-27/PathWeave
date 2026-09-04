@@ -1,5 +1,5 @@
 fastapi
-uvicorn
-langgraph
+uvicorn[standard]
 python-dotenv
 openai
+requests
