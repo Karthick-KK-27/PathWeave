@@ -1,0 +1,15 @@
+{
+  "electives": [
+    {"name": "Machine Learning Systems", "skills_covered": ["PyTorch", "Distributed Systems", "MLOps"], "effort": "high"},
+    {"name": "Cloud Computing", "skills_covered": ["Docker", "Kubernetes", "AWS"], "effort": "medium"},
+    {"name": "Web Development", "skills_covered": ["React", "Node.js", "REST APIs"], "effort": "medium"}
+  ],
+  "clubs": [
+    {"name": "AI/ML Club", "skills_covered": ["PyTorch", "Model Deployment"], "effort": "low"},
+    {"name": "Competitive Programming Club", "skills_covered": ["Algorithms", "Data Structures"], "effort": "medium"}
+  ],
+  "projects": [
+    {"name": "Build a distributed training pipeline", "skills_covered": ["Distributed Systems", "PyTorch"], "effort": "medium"},
+    {"name": "Containerize an existing project with Docker", "skills_covered": ["Docker"], "effort": "low"}
+  ]
+}
