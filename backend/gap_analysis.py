@@ -116,21 +116,6 @@ extra_body={
 
 
         # -----------------------------------------
-        # DEBUG INFORMATION
-        # -----------------------------------------
-
-        print("\n========== MODEL STATUS ==========\n")
-
-        print("Finish reason:")
-        print(response.choices[0].finish_reason)
-
-        print("\nResponse content length:")
-        print(len(result) if result else 0)
-
-        print("\n==================================\n")
-
-
-        # -----------------------------------------
         # EMPTY RESPONSE CHECK
         # -----------------------------------------
 

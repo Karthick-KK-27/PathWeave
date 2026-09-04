@@ -7,7 +7,7 @@ function ResultsScreen({ result, onViewSchedule }) {
   return (
     <div className="max-w-4xl mx-auto">
       <h1 className="text-2xl font-bold mb-8">
-        Your Path to <span className="gradient-text">{result.job_requirements.role}</span>
+        Your Path to <span className="gradient-text">{result.job_requirements?.role || "your role"}</span>
       </h1>
 
       <div className="card mb-8">

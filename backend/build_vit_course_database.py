@@ -1,8 +1,9 @@
 import json
 import os
+from pathlib import Path
 
 
-OUTPUT_FILE = "data/vit_courses.json"
+OUTPUT_FILE = str(Path(__file__).resolve().parent / "data" / "vit_courses.json")
 
 LAST_VERIFIED = "2026-09-04"
 

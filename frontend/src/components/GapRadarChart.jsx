@@ -1,8 +1,8 @@
 import { RadarChart, PolarGrid, PolarAngleAxis, Radar, ResponsiveContainer } from "recharts";
 
-function GapRadarChart({ gaps }) {
+function GapRadarChart({ gaps = [] }) {
   const severityValue = { critical: 3, moderate: 2, minor: 1 };
-  const data = gaps.map((g) => ({ skill: g.skill, gap: severityValue[g.severity] }));
+  const data = (gaps || []).map((g) => ({ skill: g.skill, gap: severityValue[g.severity] || 0 }));
 
   return (
     <ResponsiveContainer width="100%" height={280}>

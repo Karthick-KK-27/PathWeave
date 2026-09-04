@@ -239,7 +239,13 @@ def generate_plan(req: PlanRequest) -> Dict[str, Any]:
         # --- 2. Career requirements ------------------------------------
         career_raw = research_career(req.target_job)
         career_requirements = _parse_json_response(career_raw) or {}
-        career_requirements.setdefault("role", req.target_job)
+        if not isinstance(career_requirements, dict):
+            career_requirements = {}
+        # setdefault won't replace an existing but falsy (None/"") role,
+        # and job_requirements.role must always be a non-empty string.
+        career_requirements["role"] = str(
+            career_requirements.get("role") or req.target_job
+        )
 
         # --- 3. Real job market (optional; fails soft) -----------------
         job_market: Dict[str, Any] = {}
@@ -250,6 +256,8 @@ def generate_plan(req: PlanRequest) -> Dict[str, Any]:
                     job_market = _parse_json_response(
                         analyze_jobs(req.target_job, jobs)
                     ) or {}
+                    if not isinstance(job_market, dict):
+                        job_market = {}
             except Exception as e:  # noqa: BLE001
                 # Remotive down, timeout, etc. — continue without market data
                 job_market = {"_error": f"job market fetch failed: {e}"}
@@ -257,7 +265,9 @@ def generate_plan(req: PlanRequest) -> Dict[str, Any]:
         # --- 4. Skill gap ---------------------------------------------
         gap_result = analyze_skill_gap(profile, career_requirements, job_market)
         if not isinstance(gap_result, dict):
-            gap_result = _parse_json_response(gap_result) or {}
+            gap_result = _parse_json_response(gap_result)
+        if not isinstance(gap_result, dict):
+            gap_result = {}
 
         # --- 5. VIT recommendations -----------------------------------
         try:

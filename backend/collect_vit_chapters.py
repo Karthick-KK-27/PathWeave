@@ -2,6 +2,7 @@ import requests
 import json
 from bs4 import BeautifulSoup
 from datetime import date
+from pathlib import Path
 
 
 SOURCES = {
@@ -89,7 +90,7 @@ CHAPTER_NAMES = {
 }
 
 
-OUTPUT_FILE = "data/vit_chapters.json"
+OUTPUT_FILE = str(Path(__file__).resolve().parent / "data" / "vit_chapters.json")
 
 
 print("\n==============================================")

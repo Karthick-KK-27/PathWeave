@@ -1,6 +1,7 @@
 import json
 import os
 import re
+from pathlib import Path
 
 
 # ============================================================
@@ -9,7 +10,10 @@ import re
 # VERSION 4 - ELIGIBILITY FIRST
 # ============================================================
 
-DATA_DIR = "data"
+# Anchored to this file's directory so the pipeline works regardless of
+# the process's current working directory (e.g. `uvicorn` launched from
+# the repo root instead of backend/).
+DATA_DIR = str(Path(__file__).resolve().parent / "data")
 
 COURSES_FILE = os.path.join(DATA_DIR, "vit_courses.json")
 CLUBS_FILE = os.path.join(DATA_DIR, "vit_clubs.json")
@@ -531,6 +535,9 @@ def calculate_skill_match(
 
     for gap in missing_skills:
 
+        if not isinstance(gap, dict):
+            continue
+
         skill = gap.get(
             "skill",
             ""
@@ -606,6 +613,9 @@ def score_opportunity(
 
     for gap in missing_skills:
 
+        if not isinstance(gap, dict):
+            continue
+
         if gap.get(
             "skill"
         ) in matched:
@@ -663,17 +673,6 @@ def recommend_vit_opportunities(
             eligible_opportunities.append(
                 opportunity
             )
-
-
-    print(
-        f"\nTotal VIT opportunities: "
-        f"{len(all_opportunities)}"
-    )
-
-    print(
-        f"Eligible for student: "
-        f"{len(eligible_opportunities)}"
-    )
 
 
     # ========================================================

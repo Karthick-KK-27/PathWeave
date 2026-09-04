@@ -1,9 +1,10 @@
 import requests
 import json
 from bs4 import BeautifulSoup
+from pathlib import Path
 
 URL = "https://vit.ac.in/campus/clubs/technical"
-OUTPUT_FILE = "data/vit_clubs.json"
+OUTPUT_FILE = str(Path(__file__).resolve().parent / "data" / "vit_clubs.json")
 
 print("\n==============================================")
 print("       VIT CLUB DATA COLLECTOR")

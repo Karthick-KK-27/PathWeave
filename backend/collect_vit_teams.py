@@ -2,11 +2,12 @@ import requests
 import json
 from bs4 import BeautifulSoup
 from datetime import date
+from pathlib import Path
 
 
 URL = "https://vit.ac.in/campus-category/teams"
 
-OUTPUT_FILE = "data/vit_teams.json"
+OUTPUT_FILE = str(Path(__file__).resolve().parent / "data" / "vit_teams.json")
 
 
 print("\n==============================================")
